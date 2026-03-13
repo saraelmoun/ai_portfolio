@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #030712;
+  --foreground: #e2e8f0;
+  --accent: #10b981;
+  --accent-light: #34d399;
+  --accent-dim: #065f46;
+  --card-bg: #0a1120;
+  --card-border: #0f2a1d;
 }
 
 @theme inline {
@@ -12,15 +17,251 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-mono), "Courier New", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--accent);
+  color: black;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-dim);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* ============================================
+   GRADIENT TEXT — EMERALD
+   ============================================ */
+.gradient-text {
+  background: linear-gradient(135deg, #10b981, #6ee7b7, #10b981);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 4s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+/* ============================================
+   GLOW EFFECTS — GREEN NEON
+   ============================================ */
+.glow {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.12), 0 0 45px rgba(16, 185, 129, 0.04);
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.2), 0 0 60px rgba(16, 185, 129, 0.08);
+}
+
+/* ============================================
+   GLASSMORPHISM — DARK MATRIX
+   ============================================ */
+.glass {
+  background: rgba(10, 17, 32, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(16, 185, 129, 0.06);
+}
+
+/* ============================================
+   BORDER BEAM — EMERALD
+   ============================================ */
+.border-beam {
+  position: relative;
+  overflow: hidden;
+}
+
+.border-beam::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  border-radius: 0;
+  padding: 0;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    transparent 78%,
+    rgba(16, 185, 129, 0.35) 82%,
+    rgba(52, 211, 153, 0.5) 86%,
+    rgba(110, 231, 183, 0.3) 90%,
+    transparent 94%
+  );
+  animation: beam-spin 5s linear infinite;
+  z-index: 0;
+}
+
+.border-beam::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: rgba(10, 17, 32, 0.97);
+  z-index: 1;
+}
+
+.border-beam > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes beam-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   CODE WINDOW — TERMINAL GLASS
+   ============================================ */
+.code-window {
+  background: linear-gradient(
+    135deg,
+    rgba(10, 17, 32, 0.95),
+    rgba(3, 7, 18, 0.98)
+  );
+  backdrop-filter: blur(40px);
+  border: 1px solid rgba(16, 185, 129, 0.1);
+  box-shadow:
+    0 0 30px rgba(16, 185, 129, 0.05),
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(16, 185, 129, 0.05);
+}
+
+.code-window::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(16, 185, 129, 0.4),
+    rgba(52, 211, 153, 0.4),
+    transparent
+  );
+}
+
+/* Neon reflection — green */
+.neon-reflection {
+  position: relative;
+}
+.neon-reflection::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 5%;
+  right: 5%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(16, 185, 129, 0.5),
+    rgba(52, 211, 153, 0.6),
+    rgba(16, 185, 129, 0.4),
+    transparent
+  );
+  filter: blur(4px);
+  border-radius: 50%;
+}
+
+/* ============================================
+   TERMINAL SCAN LINE
+   ============================================ */
+@keyframes scanline {
+  0% { top: -5%; }
+  100% { top: 105%; }
+}
+
+.scanline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(16, 185, 129, 0.15),
+    transparent
+  );
+  animation: scanline 6s linear infinite;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ============================================
+   MATRIX RAIN GLOW
+   ============================================ */
+@keyframes matrix-pulse {
+  0%, 100% { opacity: 0.03; }
+  50% { opacity: 0.06; }
+}
+
+.matrix-bg {
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(16, 185, 129, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(16, 185, 129, 0.03) 0%, transparent 50%);
+  animation: matrix-pulse 8s ease infinite;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes blink-cursor {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink-cursor 1s step-end infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.25), 0 0 40px rgba(16, 185, 129, 0.08);
+  }
+}
+
+.icon-glow:hover {
+  animation: pulse-glow 2s ease infinite;
+}
+
+/* Flow pulses */
+.flow-pulse-1 { animation: flow-pulse 3s ease-in-out infinite; }
+.flow-pulse-2 { animation: flow-pulse 3s ease-in-out 0.5s infinite; }
+.flow-pulse-3 { animation: flow-pulse 3s ease-in-out 1s infinite; }
+.flow-pulse-4 { animation: flow-pulse 3s ease-in-out 1.5s infinite; }
+
+@keyframes flow-pulse {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.8; }
 }
