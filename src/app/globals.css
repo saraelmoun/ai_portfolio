@@ -87,6 +87,16 @@ html {
 }
 
 /* ============================================
+   PLAY OVERLAY — PROJECT CARDS
+   ============================================ */
+.play-overlay {
+  background: rgba(10, 17, 32, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+/* ============================================
    BORDER BEAM — EMERALD
    ============================================ */
 .border-beam {

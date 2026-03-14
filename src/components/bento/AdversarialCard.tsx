@@ -60,8 +60,8 @@ function PixelGrid({
       className="rounded-lg overflow-hidden"
       style={{
         display: "grid",
-        gridTemplateColumns: "repeat(8, 13px)",
-        gridTemplateRows: "repeat(8, 13px)",
+        gridTemplateColumns: "repeat(8, 9px)",
+        gridTemplateRows: "repeat(8, 9px)",
         gap: "1px",
         padding: "1px",
         background: "rgba(255,255,255,0.02)",
@@ -84,8 +84,8 @@ function PixelGrid({
             animate={{ opacity: 1 }}
             transition={{ delay: i * 0.004 }}
             style={{
-              width: 13,
-              height: 13,
+              width: 9,
+              height: 9,
               backgroundColor: bgColor,
               opacity: showPerturbation ? 1 : val * 0.9 + 0.05,
               boxShadow:
@@ -160,9 +160,9 @@ function ConfidenceBars({
 
 function Operator({ symbol, label }: { symbol: string; label: string }) {
   return (
-    <div className="flex flex-col items-center gap-1 self-center mx-2">
-      <div className="w-8 h-8 rounded-full bg-white/[0.03] border border-white/[0.08] flex items-center justify-center">
-        <span className="text-sm text-gray-300 font-mono">{symbol}</span>
+    <div className="flex flex-col items-center gap-1 self-center mx-1 md:mx-2">
+      <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-white/[0.03] border border-white/[0.08] flex items-center justify-center">
+        <span className="text-xs md:text-sm text-gray-300 font-mono">{symbol}</span>
       </div>
       <span className="text-[7px] text-gray-600 font-mono">{label}</span>
     </div>
@@ -265,8 +265,8 @@ export default function AdversarialCard() {
         </div>
 
         {/* Main visualization */}
-        <div className="flex-1 flex items-center justify-center">
-          <div className="flex items-center overflow-x-auto pb-2">
+        <div className="flex-1 flex items-center justify-center overflow-hidden">
+          <div className="flex items-center flex-wrap md:flex-nowrap justify-center gap-y-3">
             {/* Original image */}
             <div className="flex flex-col items-center gap-2">
               <PixelGrid data={originalImage} color="#3b82f6" />
@@ -379,7 +379,7 @@ export default function AdversarialCard() {
                   initial={{ opacity: 0, x: 10 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 10 }}
-                  className="ml-4 pl-4 border-l border-white/[0.06] self-center"
+                  className="ml-2 md:ml-4 pl-2 md:pl-4 border-l border-white/[0.06] self-center hidden md:block"
                 >
                   <div className="flex flex-col gap-2">
                     <div className="text-[9px] font-mono text-red-400 font-bold">
@@ -425,7 +425,7 @@ export default function AdversarialCard() {
         </div>
 
         {/* Bottom */}
-        <div className="flex items-center gap-4 mt-3 pt-3 border-t border-white/[0.04]">
+        <div className="flex items-center gap-3 flex-wrap mt-3 pt-3 border-t border-white/[0.04]">
           <div className="flex items-center gap-1.5">
             <div className="w-2 h-2 rounded-full bg-blue-500" />
             <span className="text-[8px] text-gray-500 font-mono">

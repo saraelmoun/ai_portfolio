@@ -106,62 +106,45 @@ export default function VAECard() {
         {/* Two-column layout */}
         <div className="flex-1 flex flex-col md:flex-row gap-5 min-h-0">
           {/* LEFT — Architecture pipeline (vertical) */}
-          <div className="md:w-[40%] flex flex-col gap-4">
-            {/* Pipeline */}
-            <div className="rounded-xl bg-white/[0.02] border border-white/[0.06] p-4 flex-1 flex flex-col justify-center">
-              <PipelineStep
-                label="Input"
-                content="x"
-                sub={null}
-                delay={0}
-              />
-              <VerticalArrow />
+          <div className="md:w-[38%] flex flex-col gap-2">
+            {/* Pipeline — compact 3 steps */}
+            <div className="rounded-xl bg-white/[0.02] border border-white/[0.06] p-2.5 flex flex-col gap-0">
               <PipelineStep
                 label="Encoder"
-                content="q(z|x) → μ, σ²"
-                sub="Réseau de neurones"
-                delay={0.1}
+                content="x → q(z|x) → μ, σ²"
+                delay={0}
                 accent
               />
               <VerticalArrow />
               <PipelineStep
-                label="Reparameterization"
+                label="Reparam."
                 content="z = μ + σ ⊙ ε"
-                sub="ε ~ N(0, I)"
-                delay={0.2}
+                delay={0.1}
                 highlight
               />
               <VerticalArrow />
               <PipelineStep
                 label="Decoder"
-                content="p(x̂|z)"
-                sub="Reconstruction"
-                delay={0.3}
+                content="p(x̂|z) → x̂ ≈ x"
+                delay={0.2}
                 accent
-              />
-              <VerticalArrow />
-              <PipelineStep
-                label="Output"
-                content="x̂ ≈ x"
-                sub={null}
-                delay={0.4}
               />
             </div>
 
             {/* KL insight */}
-            <div className="rounded-xl bg-emerald-500/[0.04] border border-emerald-500/10 p-3">
-              <div className="text-[9px] font-mono text-emerald-400 font-semibold mb-1.5">
+            <div className="rounded-xl bg-emerald-500/[0.04] border border-emerald-500/10 p-2.5">
+              <div className="text-[8px] font-mono text-emerald-400 font-semibold mb-1">
                 Pourquoi la contrainte KL ?
               </div>
-              <div className="text-[8px] text-gray-400 leading-relaxed">
+              <div className="text-[7px] text-gray-400 leading-relaxed">
                 On force{" "}
                 <span className="text-yellow-300">q(z|x)</span>
                 {" "}≈{" "}
                 <span className="text-emerald-300">N(0, I)</span>
-                {" "}pour que l&apos;espace latent soit{" "}
+                {" "}pour un espace latent{" "}
                 <span className="text-white font-medium">continu</span> et{" "}
-                <span className="text-white font-medium">régulier</span>.
-                On peut alors sampler z ~ N(0, I) et décoder pour{" "}
+                <span className="text-white font-medium">régulier</span>,
+                permettant de{" "}
                 <span className="text-emerald-300">générer de nouvelles données</span>.
               </div>
             </div>
@@ -397,14 +380,12 @@ export default function VAECard() {
 function PipelineStep({
   label,
   content,
-  sub,
   delay,
   accent = false,
   highlight = false,
 }: {
   label: string;
   content: string;
-  sub: string | null;
   delay: number;
   accent?: boolean;
   highlight?: boolean;
@@ -415,7 +396,7 @@ function PipelineStep({
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ delay }}
-      className={`flex items-center gap-3 px-3 py-2 rounded-lg ${
+      className={`flex items-center gap-2 px-2 py-1.5 rounded-lg ${
         highlight
           ? "bg-yellow-500/[0.06] border border-yellow-500/15"
           : accent
@@ -423,24 +404,19 @@ function PipelineStep({
           : "bg-white/[0.02] border border-white/[0.05]"
       }`}
     >
-      <div className="text-[8px] font-mono text-gray-500 w-20 flex-shrink-0 uppercase tracking-wider">
+      <div className="text-[7px] font-mono text-gray-500 w-14 flex-shrink-0 uppercase tracking-wider">
         {label}
       </div>
-      <div className="flex-1">
-        <div
-          className={`text-[10px] font-mono font-semibold ${
-            highlight
-              ? "text-yellow-300"
-              : accent
-              ? "text-emerald-300"
-              : "text-white"
-          }`}
-        >
-          {content}
-        </div>
-        {sub && (
-          <div className="text-[7px] text-gray-500 mt-0.5">{sub}</div>
-        )}
+      <div
+        className={`text-[9px] font-mono font-semibold truncate ${
+          highlight
+            ? "text-yellow-300"
+            : accent
+            ? "text-emerald-300"
+            : "text-white"
+        }`}
+      >
+        {content}
       </div>
     </motion.div>
   );
@@ -449,9 +425,9 @@ function PipelineStep({
 /* ── Vertical arrow ── */
 function VerticalArrow() {
   return (
-    <div className="flex justify-center py-0.5">
-      <div className="w-[1px] h-3 bg-gradient-to-b from-emerald-500/30 to-emerald-500/60 relative">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0 border-t-[3px] border-t-emerald-500/60 border-x-[2px] border-x-transparent" />
+    <div className="flex justify-center py-px">
+      <div className="w-[1px] h-2 bg-gradient-to-b from-emerald-500/30 to-emerald-500/60 relative">
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0 border-t-[2px] border-t-emerald-500/60 border-x-[1.5px] border-x-transparent" />
       </div>
     </div>
   );

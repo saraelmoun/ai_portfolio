@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const navItems = [
   { name: "About", href: "#about" },
@@ -46,6 +47,12 @@ export default function Navbar() {
               {item.name}
             </a>
           ))}
+          <Link
+            href="/cv"
+            className="text-sm px-4 py-1.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-mono transition-all duration-200"
+          >
+            Mon CV
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -99,6 +106,13 @@ export default function Navbar() {
                   {item.name}
                 </a>
               ))}
+              <Link
+                href="/cv"
+                onClick={() => setMobileOpen(false)}
+                className="text-sm px-4 py-1.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-mono transition-all duration-200 text-center"
+              >
+                Mon CV
+              </Link>
             </div>
           </motion.div>
         )}

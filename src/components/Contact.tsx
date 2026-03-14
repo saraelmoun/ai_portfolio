@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FiMail, FiLinkedin, FiGithub, FiArrowUpRight } from "react-icons/fi";
+import { FiMail, FiLinkedin, FiArrowUpRight } from "react-icons/fi";
 
 export default function Contact() {
   return (
@@ -36,7 +36,7 @@ export default function Contact() {
           className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
         >
           <a
-            href="mailto:sara.elmountasser@email.com"
+            href="mailto:sara.elmountasser@telecom-paris.fr"
             className="inline-flex items-center gap-2 px-8 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full font-medium font-mono transition-all duration-200 glow-hover"
           >
             <FiMail />
@@ -53,9 +53,8 @@ export default function Contact() {
           className="flex justify-center gap-6"
         >
           {[
-            { icon: FiGithub, href: "https://github.com/", label: "GitHub" },
-            { icon: FiLinkedin, href: "https://linkedin.com/", label: "LinkedIn" },
-            { icon: FiMail, href: "mailto:sara.elmountasser@email.com", label: "Email" },
+            { icon: FiLinkedin, href: "https://www.linkedin.com/in/sara-elmountasser/", label: "LinkedIn" },
+            { icon: FiMail, href: "mailto:sara.elmountasser@telecom-paris.fr", label: "Email" },
           ].map((social) => (
             <a
               key={social.label}

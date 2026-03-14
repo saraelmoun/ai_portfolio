@@ -6,10 +6,17 @@ import { motion, AnimatePresence } from "framer-motion";
 // Training epochs — the generated image gets progressively better
 // Each epoch is an 8x8 grid of intensity values
 const epochs: number[][][] = [
-  // Epoch 0: pure noise
-  Array.from({ length: 8 }, () =>
-    Array.from({ length: 8 }, () => Math.random() * 0.5)
-  ),
+  // Epoch 0: pure noise (fixed seed for SSR hydration)
+  [
+    [0.23, 0.41, 0.12, 0.38, 0.05, 0.47, 0.31, 0.19],
+    [0.44, 0.08, 0.36, 0.22, 0.49, 0.14, 0.27, 0.42],
+    [0.11, 0.33, 0.46, 0.02, 0.39, 0.21, 0.48, 0.07],
+    [0.35, 0.18, 0.43, 0.29, 0.06, 0.37, 0.15, 0.45],
+    [0.26, 0.09, 0.41, 0.17, 0.50, 0.03, 0.34, 0.28],
+    [0.47, 0.20, 0.13, 0.40, 0.24, 0.32, 0.10, 0.46],
+    [0.04, 0.38, 0.25, 0.16, 0.43, 0.01, 0.30, 0.49],
+    [0.22, 0.45, 0.07, 0.35, 0.11, 0.42, 0.19, 0.36],
+  ],
   // Epoch 1: vague structure
   [
     [0.1, 0.1, 0.2, 0.3, 0.3, 0.2, 0.1, 0.1],
@@ -56,12 +63,16 @@ const dScores = [
   { dReal: 0.55, dFake: 0.48 }, // epoch 3: near equilibrium
 ];
 
+// Deterministic pseudo-random for SSR hydration safety
+function seededRandom(seed: number) {
+  const x = Math.sin(seed * 9301 + 49297) * 49297;
+  return x - Math.floor(x);
+}
+
 // Latent noise vector z — random values displayed as colored bars
 function NoiseVector({ epoch }: { epoch: number }) {
-  // Regenerate noise per epoch for visual variety
   const noise = useMemo(
-    () => Array.from({ length: 16 }, () => Math.random()),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    () => Array.from({ length: 16 }, (_, i) => seededRandom(epoch * 100 + i)),
     [epoch]
   );
 
