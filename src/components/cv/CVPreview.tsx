@@ -2,26 +2,53 @@
 
 import { PDFViewer, PDFDownloadLink } from "@react-pdf/renderer";
 import CVDocument from "./CVDocument";
+import CVDocumentLBC from "./CVDocumentLBC";
+import { getCompanyTheme } from "./companyConfig";
 import Link from "next/link";
 import { FiArrowLeft, FiDownload } from "react-icons/fi";
 
-export default function CVPreview() {
+function getCVDocument(company: string) {
+  const key = company.toLowerCase().replace(/\s+/g, "");
+  if (key === "littlebigcode") return <CVDocumentLBC />;
+  return <CVDocument company={company} />;
+}
+
+export default function CVPreview({
+  company = "",
+  onBack,
+}: {
+  company?: string;
+  onBack?: () => void;
+}) {
+  const theme = getCompanyTheme(company);
+  const doc = getCVDocument(company);
+
   return (
     <div className="min-h-screen bg-[#030712] flex flex-col">
       {/* Top bar */}
       <div className="flex items-center justify-between px-6 py-4 border-b border-emerald-900/30 bg-[#0a1120]">
-        <Link
-          href="/"
-          className="flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors font-mono text-sm"
-        >
-          <FiArrowLeft />
-          Retour au portfolio
-        </Link>
+        {onBack ? (
+          <button
+            onClick={onBack}
+            className="flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors font-mono text-sm"
+          >
+            <FiArrowLeft />
+            Changer d&apos;entreprise
+          </button>
+        ) : (
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors font-mono text-sm"
+          >
+            <FiArrowLeft />
+            Retour au portfolio
+          </Link>
+        )}
 
         <div className="flex items-center gap-4">
           <PDFDownloadLink
-            document={<CVDocument />}
-            fileName="CV_Sara_El_Mountasser_Orange.pdf"
+            document={doc}
+            fileName={theme.fileName}
           >
             {({ loading }) => (
               <button
@@ -47,7 +74,7 @@ export default function CVPreview() {
             minHeight: "calc(100vh - 100px)",
           }}
         >
-          <CVDocument />
+          {doc}
         </PDFViewer>
       </div>
     </div>
