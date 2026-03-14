@@ -499,7 +499,7 @@ function Step1Scene({ onNext }: { onNext: () => void }) {
             className="text-base md:text-lg text-gray-600 mb-5 tracking-[0.3em] uppercase font-light"
             style={{ transform: "translateZ(15px)" }}
           >
-            Vous ne vendez pas
+            {flipped ? "Vous créez" : "Vous ne produisez pas"}
           </motion.p>
 
           <div className="relative inline-block h-[70px] md:h-[110px]" style={{ perspective: "900px" }}>
