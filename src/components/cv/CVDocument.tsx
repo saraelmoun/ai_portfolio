@@ -247,7 +247,7 @@ export default function CVDocument({ company = "" }: { company?: string }) {
                 <Text style={{ fontSize: 12, color: accent, fontFamily: "Helvetica-BoldOblique" }}>est là.</Text>
               </View>
               <Text style={[styles.headerTitle, { color: accentLight }]}>
-                Ingenieure IA &amp; MLOps | Specialiste NLP, Transformers &amp; Self-Healing
+                Ingénieure IA &amp; MLOps | Spécialiste NLP, Transformers &amp; Self-Healing
               </Text>
               <Text style={styles.headerTagline}>
                 {t.tagline}
@@ -279,7 +279,7 @@ export default function CVDocument({ company = "" }: { company?: string }) {
 
               <View style={styles.expHeader}>
                 <View>
-                  <Text style={[styles.expTitle, { color: t.headerDark }]}>Telecom Paris — Institut Polytechnique de Paris</Text>
+                  <Text style={[styles.expTitle, { color: t.headerDark }]}>Télécom Paris — Institut Polytechnique de Paris</Text>
                 </View>
                 <Text style={styles.expDate}>2025 — 2026</Text>
               </View>
@@ -288,43 +288,43 @@ export default function CVDocument({ company = "" }: { company?: string }) {
 
               <View style={styles.expHeader}>
                 <View>
-                  <Text style={[styles.expTitle, { color: t.headerDark }]}>IMT Nord Europe — Institut Mines-Telecom</Text>
+                  <Text style={[styles.expTitle, { color: t.headerDark }]}>IMT Nord Europe — Institut Mines-Télécom</Text>
                 </View>
                 <Text style={styles.expDate}>2022 — 2025</Text>
               </View>
-              <Text style={styles.eduDegreeMain}>Diplome d&apos;Ingenieure — Machine Learning, Computer Vision, Cloud</Text>
+              <Text style={styles.eduDegreeMain}>Diplôme d&apos;Ingénieure — Machine Learning, Computer Vision, Cloud</Text>
             </View>
 
             {/* ─── EXPERIENCES ─── */}
             <View style={styles.section}>
-              <Text style={[styles.sectionTitle, { color: t.headerBg, borderBottomColor: accent }]}>Experiences Professionnelles</Text>
+              <Text style={[styles.sectionTitle, { color: t.headerBg, borderBottomColor: accent }]}>Expériences Professionnelles</Text>
 
               {/* Exp 1 */}
               <View style={styles.expHeader}>
                 <View>
-                  <Text style={[styles.expTitle, { color: t.headerDark }]}>Developpeuse Web Full-Stack</Text>
+                  <Text style={[styles.expTitle, { color: t.headerDark }]}>Développeuse Web Full-Stack</Text>
                   <Text style={[styles.expCompany, { color: accent }]}>Orange — Lille</Text>
                 </View>
                 <Text style={styles.expDate}>2022 — 2023</Text>
               </View>
               <Bullet accent={accent}>Conception de l&apos;architecture technique d&apos;une application web en Symfony.</Bullet>
-              <Bullet accent={accent}>Developpement backend (calcul des KPI, gestion des roles, historisation des donnees) et interface frontend.</Bullet>
-              <Bullet accent={accent}>Integration d&apos;APIs internes pour l&apos;agregation des donnees SI et automatisation de la mise a jour des indicateurs.</Bullet>
-              <Bullet accent={accent}>Tests automatises (PHPUnit) pour garantir la maintenabilite du code.</Bullet>
+              <Bullet accent={accent}>Développement backend (calcul des KPI, gestion des rôles, historisation des données) et interface frontend.</Bullet>
+              <Bullet accent={accent}>Intégration d&apos;APIs internes pour l&apos;agrégation des données SI et automatisation de la mise à jour des indicateurs.</Bullet>
+              <Bullet accent={accent}>Tests automatisés (PHPUnit) pour garantir la maintenabilité du code.</Bullet>
               <View style={{ marginBottom: 7 }} />
 
               {/* Exp 2 */}
               <View style={styles.expHeader}>
                 <View>
-                  <Text style={[styles.expTitle, { color: t.headerDark }]}>Ingenieure Data</Text>
+                  <Text style={[styles.expTitle, { color: t.headerDark }]}>Ingénieure Data</Text>
                   <Text style={[styles.expCompany, { color: accent }]}>Orange — Lille</Text>
                 </View>
                 <Text style={styles.expDate}>2023 — 2024</Text>
               </View>
-              <Bullet accent={accent}>Animation de reunions de cadrage pour identifier, formaliser et hierarchiser les attentes metiers.</Bullet>
-              <Bullet accent={accent}>Conception d&apos;une base de donnees Access centralisee, consolidant automatiquement les exports du SI.</Bullet>
-              <Bullet accent={accent}>Nettoyage et validation des jeux de donnees (qualite, coherence, exhaustivite).</Bullet>
-              <Bullet accent={accent}>Developpement de tableaux de bord interactifs (Power BI), unifiant plusieurs rapports existants en une solution unique et evolutive.</Bullet>
+              <Bullet accent={accent}>Animation de réunions de cadrage pour identifier, formaliser et hiérarchiser les attentes métiers.</Bullet>
+              <Bullet accent={accent}>Conception d&apos;une base de données Access centralisée, consolidant automatiquement les exports du SI.</Bullet>
+              <Bullet accent={accent}>Nettoyage et validation des jeux de données (qualité, cohérence, exhaustivité).</Bullet>
+              <Bullet accent={accent}>Développement de tableaux de bord interactifs (Power BI), unifiant plusieurs rapports existants en une solution unique et évolutive.</Bullet>
               <View style={{ marginBottom: 7 }} />
 
               {/* Exp 3 */}
@@ -335,24 +335,24 @@ export default function CVDocument({ company = "" }: { company?: string }) {
                 </View>
                 <Text style={styles.expDate}>2024 — 2025</Text>
               </View>
-              <Bullet accent={accent}>Pilotage d&apos;une equipe pluridisciplinaire de 5 experts (Developpeurs, Operationnels, Process Owners).</Bullet>
-              <Bullet accent={accent}>Mise en place d&apos;une gouvernance robuste (comites de pilotage, reporting, indicateurs de performance).</Bullet>
-              <Bullet accent={accent}>Supervision de la redaction des cahiers des charges fonctionnels, du developpement et de la recette fonctionnelle.</Bullet>
-              <Bullet accent={accent}>Negociation avec les parties prenantes pour garantir un financement perenne et justifier l&apos;impact business.</Bullet>
+              <Bullet accent={accent}>Pilotage d&apos;une équipe pluridisciplinaire de 5 experts (Développeurs, Opérationnels, Process Owners).</Bullet>
+              <Bullet accent={accent}>Mise en place d&apos;une gouvernance robuste (comités de pilotage, reporting, indicateurs de performance).</Bullet>
+              <Bullet accent={accent}>Supervision de la rédaction des cahiers des charges fonctionnels, du développement et de la recette fonctionnelle.</Bullet>
+              <Bullet accent={accent}>Négociation avec les parties prenantes pour garantir un financement pérenne et justifier l&apos;impact business.</Bullet>
             </View>
 
             {/* ─── PROJET ─── */}
             <View style={styles.section}>
-              <Text style={[styles.sectionTitle, { color: t.headerBg, borderBottomColor: accent }]}>Projets Academiques</Text>
+              <Text style={[styles.sectionTitle, { color: t.headerBg, borderBottomColor: accent }]}>Projets Académiques</Text>
 
               <View style={styles.expHeader}>
                 <View>
-                  <Text style={[styles.projectTitle, { color: t.headerDark }]}>Prediction du Marche Automobile — Renault (Fil Rouge)</Text>
+                  <Text style={[styles.projectTitle, { color: t.headerDark }]}>Prédiction du Marché Automobile — Renault (Fil Rouge)</Text>
                 </View>
                 <Text style={styles.expDate}>2025 — 2026</Text>
               </View>
-              <Bullet accent={accent}>Modelisation de series temporelles pour la prediction du marche automobile a partir de bases de donnees europeennes.</Bullet>
-              <Bullet accent={accent}>Signal NLP pour capturer les ambivalences politiques comme variables exogenes. Clustering des segments de marche.</Bullet>
+              <Bullet accent={accent}>Modélisation de séries temporelles pour la prédiction du marché automobile à partir de bases de données européennes.</Bullet>
+              <Bullet accent={accent}>Signal NLP pour capturer les ambivalences politiques comme variables exogènes. Clustering des segments de marché.</Bullet>
               <View style={styles.projectTags}>
                 <Text style={[styles.projectTag, { color: accent, borderColor: accent }]}>Time Series</Text>
                 <Text style={[styles.projectTag, { color: accent, borderColor: accent }]}>NLP</Text>
@@ -362,12 +362,12 @@ export default function CVDocument({ company = "" }: { company?: string }) {
 
               <View style={styles.expHeader}>
                 <View>
-                  <Text style={[styles.projectTitle, { color: t.headerDark }]}>Pipeline MLOps — Prediction Consommation Electrique (Linky)</Text>
+                  <Text style={[styles.projectTitle, { color: t.headerDark }]}>Pipeline MLOps — Prédiction Consommation Électrique (Linky)</Text>
                 </View>
                 <Text style={styles.expDate}>2025 — 2026</Text>
               </View>
-              <Bullet accent={accent}>Pipeline end-to-end : ingestion event-driven (Kestra), Data Warehouse PostgreSQL (architecture Medallion), modele SARIMA avec tracking MLflow.</Bullet>
-              <Bullet accent={accent}>Developpement API FastAPI + dashboard Streamlit. CI/CD/CT (GitHub Actions), monitoring Kibana, detection de data drift (test KS).</Bullet>
+              <Bullet accent={accent}>Pipeline end-to-end : ingestion event-driven (Kestra), Data Warehouse PostgreSQL (architecture Medallion), modèle SARIMA avec tracking MLflow.</Bullet>
+              <Bullet accent={accent}>Développement API FastAPI + dashboard Streamlit. CI/CD/CT (GitHub Actions), monitoring Kibana, détection de data drift (test KS).</Bullet>
               <View style={styles.projectTags}>
                 <Text style={[styles.projectTag, { color: accent, borderColor: accent }]}>MLflow</Text>
                 <Text style={[styles.projectTag, { color: accent, borderColor: accent }]}>FastAPI</Text>
@@ -383,7 +383,7 @@ export default function CVDocument({ company = "" }: { company?: string }) {
               <Text style={[styles.sectionTitle, { color: t.headerBg, borderBottomColor: accent }]}>Distinction</Text>
               <View style={styles.expHeader}>
                 <View>
-                  <Text style={[styles.projectTitle, { color: t.headerDark }]}>2e place — Competition Kaggle — Sound Classification</Text>
+                  <Text style={[styles.projectTitle, { color: t.headerDark }]}>2e place — Compétition Kaggle — Sound Classification</Text>
                 </View>
                 <Text style={styles.expDate}>2024</Text>
               </View>
@@ -391,11 +391,11 @@ export default function CVDocument({ company = "" }: { company?: string }) {
               <View style={{ marginBottom: 5 }} />
               <View style={styles.expHeader}>
                 <View>
-                  <Text style={[styles.projectTitle, { color: t.headerDark }]}>7e place — Competition Kaggle — Multimodal Action Recognition</Text>
+                  <Text style={[styles.projectTitle, { color: t.headerDark }]}>7e place — Compétition Kaggle — Multimodal Action Recognition</Text>
                 </View>
                 <Text style={styles.expDate}>2025</Text>
               </View>
-              <Bullet accent={accent}>Reconnaissance d&apos;actions multimodales (mouvements corporels + activite plantaire) — accuracy 83% — IMT Nord Europe.</Bullet>
+              <Bullet accent={accent}>Reconnaissance d&apos;actions multimodales (mouvements corporels + activité plantaire) — accuracy 83% — IMT Nord Europe.</Bullet>
             </View>
           </View>
 
@@ -404,7 +404,7 @@ export default function CVDocument({ company = "" }: { company?: string }) {
 
             {/* ─── COMPETENCES ─── */}
             <View style={styles.section}>
-              <Text style={[styles.sectionTitleSide, { color: t.headerBg, borderBottomColor: accent }]}>Competences</Text>
+              <Text style={[styles.sectionTitleSide, { color: t.headerBg, borderBottomColor: accent }]}>Compétences</Text>
 
               <View style={styles.skillCategory}>
                 <Text style={[styles.skillCategoryTitle, { color: t.headerDark }]}>IA &amp; Machine Learning</Text>
@@ -465,7 +465,7 @@ export default function CVDocument({ company = "" }: { company?: string }) {
             <View style={styles.section}>
               <Text style={[styles.sectionTitleSide, { color: t.headerBg, borderBottomColor: accent }]}>Langues</Text>
               <View style={styles.langRow}>
-                <Text style={styles.langName}>Francais</Text>
+                <Text style={styles.langName}>Français</Text>
                 <Text style={styles.langLevel}>Bilingue</Text>
               </View>
               <View style={styles.langRow}>
@@ -476,10 +476,10 @@ export default function CVDocument({ company = "" }: { company?: string }) {
 
             {/* ─── QUALITES ─── */}
             <View style={styles.section}>
-              <Text style={[styles.sectionTitleSide, { color: t.headerBg, borderBottomColor: accent }]}>Qualites</Text>
+              <Text style={[styles.sectionTitleSide, { color: t.headerBg, borderBottomColor: accent }]}>Qualités</Text>
               <Text style={styles.interestText}>
-                Curiosite technique{"\n"}
-                Resolution de problemes{"\n"}
+                Curiosité technique{"\n"}
+                Résolution de problèmes{"\n"}
                 Agile / Scrum{"\n"}
                 Autonomie &amp; initiative
               </Text>
@@ -487,11 +487,11 @@ export default function CVDocument({ company = "" }: { company?: string }) {
 
             {/* ─── CENTRES D'INTERET ─── */}
             <View style={styles.section}>
-              <Text style={[styles.sectionTitleSide, { color: t.headerBg, borderBottomColor: accent }]}>Centres d&apos;interet</Text>
+              <Text style={[styles.sectionTitleSide, { color: t.headerBg, borderBottomColor: accent }]}>Centres d&apos;intérêt</Text>
               <Text style={styles.interestText}>
-                Vulgarisation scientifique{"\n"}
-                Theorie de l&apos;optimisation (convergence){"\n"}
-                Creation video &amp; IA generative{"\n"}
+                Veille stratégique Data &amp; IA{"\n"}
+                Vulgarisation technique{"\n"}
+                Course à pied (Objectif semi-marathon){"\n"}
                 Surf
               </Text>
             </View>

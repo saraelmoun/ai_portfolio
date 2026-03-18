@@ -457,10 +457,10 @@ export default function CVDocumentLBC() {
           <View style={s.headerInfo}>
             <View style={s.nameRow}>
               <Text style={s.name}>Sara El Mountasser</Text>
-              <Text style={s.nameAccent}>est la.</Text>
+              <Text style={s.nameAccent}>est là.</Text>
             </View>
             <Text style={s.titleText}>
-              Ingenieure IA &amp; MLOps — NLP, Transformers &amp; Self-Healing
+              Ingénieure IA &amp; MLOps — NLP, Transformers &amp; Self-Healing
             </Text>
             <View style={s.contactRow}>
               <Link src="mailto:sara.elmountasser@telecom-paris.fr" style={s.contactLink}>
@@ -483,7 +483,7 @@ export default function CVDocumentLBC() {
         {/* ── Tagline ── */}
         <View style={s.taglineBar}>
           <Text style={s.taglineText}>
-            Concevoir des systemes IA robustes et deployer des pipelines ML en production — de la modelisation au monitoring, avec une approche orientee impact business.
+            Concevoir des systèmes IA robustes et déployer des pipelines ML en production — de la modélisation au monitoring, avec une approche orientée impact business.
           </Text>
         </View>
 
@@ -496,7 +496,7 @@ export default function CVDocumentLBC() {
             <View style={s.section}>
               <View style={s.sectionHeader}>
                 <View style={s.sectionAccent} />
-                <Text style={s.sectionTitle}>Experience</Text>
+                <Text style={s.sectionTitle}>Expérience</Text>
               </View>
 
               <View style={s.expBlock}>
@@ -510,10 +510,10 @@ export default function CVDocumentLBC() {
                     <Text style={s.expDate}>2024 — 2025</Text>
                   </View>
                   <Text style={s.expCompany}>Orange — Lille</Text>
-                  <Bullet>Pilotage d&apos;une equipe pluridisciplinaire de 5 experts (Developpeurs, Operationnels, Process Owners).</Bullet>
-                  <Bullet>Mise en place d&apos;une gouvernance robuste (comites de pilotage, reporting, indicateurs de performance).</Bullet>
-                  <Bullet>Supervision de la redaction des cahiers des charges fonctionnels, du developpement et de la recette fonctionnelle.</Bullet>
-                  <Bullet>Negociation avec les parties prenantes pour garantir un financement perenne et justifier l&apos;impact business.</Bullet>
+                  <Bullet>Pilotage d&apos;une équipe pluridisciplinaire de 5 experts (Développeurs, Opérationnels, Process Owners).</Bullet>
+                  <Bullet>Mise en place d&apos;une gouvernance robuste (comités de pilotage, reporting, indicateurs de performance).</Bullet>
+                  <Bullet>Supervision de la rédaction des cahiers des charges fonctionnels, du développement et de la recette fonctionnelle.</Bullet>
+                  <Bullet>Négociation avec les parties prenantes pour garantir un financement pérenne et justifier l&apos;impact business.</Bullet>
                 </View>
               </View>
 
@@ -524,14 +524,14 @@ export default function CVDocumentLBC() {
                 </View>
                 <View style={s.expContent}>
                   <View style={s.expTopRow}>
-                    <Text style={s.expTitle}>Ingenieure Data</Text>
+                    <Text style={s.expTitle}>Ingénieure Data</Text>
                     <Text style={s.expDate}>2023 — 2024</Text>
                   </View>
                   <Text style={s.expCompany}>Orange — Lille</Text>
-                  <Bullet>Animation de reunions de cadrage pour identifier, formaliser et hierarchiser les attentes metiers.</Bullet>
-                  <Bullet>Conception d&apos;une base de donnees Access centralisee, consolidant automatiquement les exports du SI.</Bullet>
-                  <Bullet>Nettoyage et validation des jeux de donnees (qualite, coherence, exhaustivite).</Bullet>
-                  <Bullet>Developpement de tableaux de bord interactifs (Power BI), unifiant plusieurs rapports existants en une solution unique et evolutive.</Bullet>
+                  <Bullet>Animation de réunions de cadrage pour identifier, formaliser et hiérarchiser les attentes métiers.</Bullet>
+                  <Bullet>Conception d&apos;une base de données Access centralisée, consolidant automatiquement les exports du SI.</Bullet>
+                  <Bullet>Nettoyage et validation des jeux de données (qualité, cohérence, exhaustivité).</Bullet>
+                  <Bullet>Développement de tableaux de bord interactifs (Power BI), unifiant plusieurs rapports existants en une solution unique et évolutive.</Bullet>
                 </View>
               </View>
 
@@ -542,14 +542,14 @@ export default function CVDocumentLBC() {
                 </View>
                 <View style={s.expContent}>
                   <View style={s.expTopRow}>
-                    <Text style={s.expTitle}>Developpeuse Full-Stack</Text>
+                    <Text style={s.expTitle}>Développeuse Full-Stack</Text>
                     <Text style={s.expDate}>2022 — 2023</Text>
                   </View>
                   <Text style={s.expCompany}>Orange — Lille</Text>
                   <Bullet>Conception de l&apos;architecture technique d&apos;une application web en Symfony.</Bullet>
-                  <Bullet>Developpement backend (calcul des KPI, gestion des roles, historisation des donnees) et interface frontend.</Bullet>
-                  <Bullet>Integration d&apos;APIs internes pour l&apos;agregation des donnees SI et automatisation de la mise a jour des indicateurs.</Bullet>
-                  <Bullet>Tests automatises (PHPUnit) pour garantir la maintenabilite du code.</Bullet>
+                  <Bullet>Développement backend (calcul des KPI, gestion des rôles, historisation des données) et interface frontend.</Bullet>
+                  <Bullet>Intégration d&apos;APIs internes pour l&apos;agrégation des données SI et automatisation de la mise à jour des indicateurs.</Bullet>
+                  <Bullet>Tests automatisés (PHPUnit) pour garantir la maintenabilité du code.</Bullet>
                 </View>
               </View>
             </View>
@@ -568,10 +568,10 @@ export default function CVDocumentLBC() {
                 </View>
                 <View style={s.expContent}>
                   <View style={s.expTopRow}>
-                    <Text style={s.expTitle}>Telecom Paris — IP Paris</Text>
+                    <Text style={s.expTitle}>Télécom Paris — IP Paris</Text>
                     <Text style={s.expDate}>2025 — 2026</Text>
                   </View>
-                  <Text style={s.eduDegree}>Mastere specialise — IA, Data &amp; MLOps</Text>
+                  <Text style={s.eduDegree}>Mastère spécialisé — IA, Data &amp; MLOps</Text>
                 </View>
               </View>
 
@@ -582,10 +582,10 @@ export default function CVDocumentLBC() {
                 </View>
                 <View style={s.expContent}>
                   <View style={s.expTopRow}>
-                    <Text style={s.expTitle}>IMT Nord Europe — Mines-Telecom</Text>
+                    <Text style={s.expTitle}>IMT Nord Europe — Mines-Télécom</Text>
                     <Text style={s.expDate}>2022 — 2025</Text>
                   </View>
-                  <Text style={s.eduDegree}>Ingenieure — ML, Computer Vision, Cloud</Text>
+                  <Text style={s.eduDegree}>Ingénieure — ML, Computer Vision, Cloud</Text>
                 </View>
               </View>
             </View>
@@ -599,11 +599,11 @@ export default function CVDocumentLBC() {
 
               <View style={s.projBlock}>
                 <View style={s.projTopRow}>
-                  <Text style={s.projTitle}>Prediction Marche Automobile — Renault</Text>
+                  <Text style={s.projTitle}>Prédiction Marché Automobile — Renault</Text>
                   <Text style={s.projDate}>2025 — 2026</Text>
                 </View>
-                <Bullet>Modelisation de series temporelles pour la prediction du marche automobile a partir de bases de donnees europeennes.</Bullet>
-                <Bullet>Signal NLP pour capturer les ambivalences politiques comme variables exogenes. Clustering des segments de marche.</Bullet>
+                <Bullet>Modélisation de séries temporelles pour la prédiction du marché automobile à partir de bases de données européennes.</Bullet>
+                <Bullet>Signal NLP pour capturer les ambivalences politiques comme variables exogènes. Clustering des segments de marché.</Bullet>
                 <View style={s.projTechRow}>
                   <Text style={s.projTag}>Time Series</Text>
                   <Text style={s.projTag}>NLP</Text>
@@ -614,11 +614,11 @@ export default function CVDocumentLBC() {
 
               <View style={s.projBlock}>
                 <View style={s.projTopRow}>
-                  <Text style={s.projTitle}>Pipeline MLOps — Consommation Electrique</Text>
+                  <Text style={s.projTitle}>Pipeline MLOps — Consommation Électrique</Text>
                   <Text style={s.projDate}>2025 — 2026</Text>
                 </View>
-                <Bullet>Pipeline end-to-end : ingestion event-driven (Kestra), Data Warehouse PostgreSQL (architecture Medallion), modele SARIMA avec tracking MLflow.</Bullet>
-                <Bullet>Developpement API FastAPI + dashboard Streamlit. CI/CD/CT (GitHub Actions), monitoring Kibana, detection de data drift (test KS).</Bullet>
+                <Bullet>Pipeline end-to-end : ingestion event-driven (Kestra), Data Warehouse PostgreSQL (architecture Medallion), modèle SARIMA avec tracking MLflow.</Bullet>
+                <Bullet>Développement API FastAPI + dashboard Streamlit. CI/CD/CT (GitHub Actions), monitoring Kibana, détection de data drift (test KS).</Bullet>
                 <View style={s.projTechRow}>
                   <Text style={s.projTag}>MLflow</Text>
                   <Text style={s.projTag}>FastAPI</Text>
@@ -638,17 +638,17 @@ export default function CVDocumentLBC() {
               </View>
               <View style={{ marginBottom: 4 }}>
                 <View style={s.expTopRow}>
-                  <Text style={s.expTitle}>2e place — Competition Kaggle — Sound Classification</Text>
+                  <Text style={s.expTitle}>2e place — Compétition Kaggle — Sound Classification</Text>
                   <Text style={s.expDate}>2024</Text>
                 </View>
                 <Bullet>Classification de sons environnementaux (50 classes) par Deep Learning — accuracy 73% — IMT Nord Europe.</Bullet>
               </View>
               <View>
                 <View style={s.expTopRow}>
-                  <Text style={s.expTitle}>7e place — Competition Kaggle — Multimodal Action Recognition</Text>
+                  <Text style={s.expTitle}>7e place — Compétition Kaggle — Multimodal Action Recognition</Text>
                   <Text style={s.expDate}>2025</Text>
                 </View>
-                <Bullet>Reconnaissance d&apos;actions multimodales (mouvements corporels + activite plantaire) — accuracy 83% — IMT Nord Europe.</Bullet>
+                <Bullet>Reconnaissance d&apos;actions multimodales (mouvements corporels + activité plantaire) — accuracy 83% — IMT Nord Europe.</Bullet>
               </View>
             </View>
           </View>
@@ -660,14 +660,14 @@ export default function CVDocumentLBC() {
             <View style={s.sectionSide}>
               <View style={s.sectionHeaderSide}>
                 <View style={s.sectionAccentSide} />
-                <Text style={s.sectionTitleSide}>Competences</Text>
+                <Text style={s.sectionTitleSide}>Compétences</Text>
               </View>
 
               <SkillGroup label="IA & Machine Learning" items={["Python", "PyTorch", "TensorFlow", "Scikit-learn", "XGBoost", "NLP", "Transformers", "Computer Vision"]} />
               <SkillGroup label="MLOps & Cloud" items={["Docker", "MLflow", "Streamlit", "CI/CD", "GitLab CI", "AWS", "Prometheus", "Grafana"]} />
               <SkillGroup label="Data Engineering" items={["Spark", "Hadoop", "Elasticsearch", "Kibana", "SQL", "Pandas", "ETL"]} />
-              <SkillGroup label="Developpement" items={["JavaScript", "React", "Java", "PHP/Symfony", "PHPUnit", "Git"]} />
-              <SkillGroup label="Pilotage & Conseil" items={["Agile", "Scrum", "Cadrage", "Reporting", "Equipe"]} />
+              <SkillGroup label="Développement" items={["JavaScript", "React", "Java", "PHP/Symfony", "PHPUnit", "Git"]} />
+              <SkillGroup label="Pilotage & Conseil" items={["Agile", "Scrum", "Cadrage", "Reporting", "Équipe"]} />
             </View>
 
             {/* ─── LANGUES ─── */}
@@ -677,7 +677,7 @@ export default function CVDocumentLBC() {
                 <Text style={s.sectionTitleSide}>Langues</Text>
               </View>
               <View style={s.langRow}>
-                <Text style={s.langName}>Francais</Text>
+                <Text style={s.langName}>Français</Text>
                 <Text style={s.langPill}>Bilingue</Text>
               </View>
               <View style={s.langRow}>
@@ -690,11 +690,11 @@ export default function CVDocumentLBC() {
             <View style={s.sectionSide}>
               <View style={s.sectionHeaderSide}>
                 <View style={s.sectionAccentSide} />
-                <Text style={s.sectionTitleSide}>Qualites</Text>
+                <Text style={s.sectionTitleSide}>Qualités</Text>
               </View>
-              <Quality>Rigueur &amp; synthese</Quality>
+              <Quality>Rigueur &amp; synthèse</Quality>
               <Quality>Communication client</Quality>
-              <Quality>Resolution de problemes</Quality>
+              <Quality>Résolution de problèmes</Quality>
               <Quality>Autonomie &amp; initiative</Quality>
             </View>
 
@@ -702,11 +702,11 @@ export default function CVDocumentLBC() {
             <View style={s.sectionSide}>
               <View style={s.sectionHeaderSide}>
                 <View style={s.sectionAccentSide} />
-                <Text style={s.sectionTitleSide}>Interets</Text>
+                <Text style={s.sectionTitleSide}>Intérêts</Text>
               </View>
-              <Quality>Vulgarisation scientifique</Quality>
-              <Quality>Theorie de l&apos;optimisation</Quality>
-              <Quality>IA generative &amp; creation video</Quality>
+              <Quality>Veille stratégique Data &amp; IA</Quality>
+              <Quality>Vulgarisation technique</Quality>
+              <Quality>Course à pied (Objectif semi-marathon)</Quality>
               <Quality>Surf</Quality>
             </View>
 
