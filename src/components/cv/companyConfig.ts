@@ -21,7 +21,7 @@ const companies: Record<string, CompanyTheme> = {
     headerDark: "#16213e",
     sidebarBg: "#f8f9fa",
     tagline:
-      "Passionnee par les modeles predictifs, l'automatisation intelligente et la remediation de code.",
+      "Passionnée par les modèles prédictifs, l'automatisation intelligente et la remédiation de code.",
     subject: "Candidature Stage IA & MLOps - Orange",
     fileName: "CV_Sara_El_Mountasser_Orange.pdf",
   },
@@ -34,7 +34,7 @@ const companies: Record<string, CompanyTheme> = {
     headerDark: "#1e293b",
     sidebarBg: "#f1f5f9",
     tagline:
-      "Passionnee par l'IA appliquee, le code auto-reparateur et les pipelines MLOps de nouvelle generation.",
+      "Passionnée par l'IA appliquée, le code auto-réparateur et les pipelines MLOps de nouvelle génération.",
     subject: "Candidature - IA & MLOps - LittleBigCode",
     fileName: "CV_Sara_El_Mountasser_LittleBigCode.pdf",
   },
@@ -49,7 +49,7 @@ const defaultTheme: CompanyTheme = {
   headerDark: "#16213e",
   sidebarBg: "#f8f9fa",
   tagline:
-    "Passionnee par les modeles predictifs, l'automatisation intelligente et la remediation de code.",
+    "Passionnée par les modèles prédictifs, l'automatisation intelligente et la remédiation de code.",
   subject: "CV - Sara El Mountasser",
   fileName: "CV_Sara_El_Mountasser.pdf",
 };

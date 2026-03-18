@@ -410,29 +410,34 @@ function DynamicBackground({ step }: { step: number }) {
    ═══════════════════════════════════════════ */
 const solutions = [
   {
-    front: "NLP & Sentiment",
-    back: "J'ai fine-tune des Transformers et manipule les mecanismes d'attention au quotidien — mon master a Telecom Paris est centre dessus.",
+    front: "Sentiment Analysis",
+    back: "Intégration de signaux faibles NLP (ambivalences politiques) pour enrichir la modélisation de séries temporelles.",
     iconType: "nlp",
   },
   {
-    front: "Prediction & Pricing",
-    back: "Chez Renault, j'ai modelise le marche automobile europeen avec des series temporelles et des signaux NLP comme variables exogenes.",
+    front: "Pricing Dynamique",
+    back: "Modélisation prédictive du marché automobile (Renault). Clustering de segments de marché.",
     iconType: "prediction",
   },
   {
-    front: "Vision & Fraude",
-    back: "2e place Kaggle en classification de sons (50 classes) — j'ai concu l'architecture Deep Learning from scratch.",
+    front: "Détection de Fraude",
+    back: "Conception d'architectures de Deep Learning pour la reconnaissance d'actions multimodales et la classification de signaux complexes.",
     iconType: "vision",
   },
   {
-    front: "Detection de tendances",
-    back: "Chez Orange, j'ai construit les pipelines data pour capter les signaux faibles et piloter les decisions metiers en temps reel.",
+    front: "Enrichissement Open Data",
+    back: "Architecture d'agrégation de données SI et Open Data. Automatisation des flux d'ingestion et fiabilisation des KPIs chez Orange.",
+    iconType: "automatisation",
+  },
+  {
+    front: "Détection de Tendances",
+    back: "Tableaux de bord interactifs (Power BI) chez Orange — signaux faibles captés, indicateurs unifiés, décisions métiers pilotées en temps réel.",
     iconType: "tendances",
   },
   {
     front: "Automatisation IA",
-    back: "J'ai deploye un pipeline MLOps E2E — ingestion, monitoring, CI/CD/CT. En production, pas en prototype.",
-    iconType: "automatisation",
+    back: "Déploiement de pipelines MLOps industriels (E2E). Industrialisation via FastAPI et monitoring continu (Kibana) pour garantir la disponibilité des services IA.",
+    iconType: "nlp",
   },
 ];
 
@@ -685,7 +690,7 @@ export default function CompanyPitch({ onContinue }: { onContinue: () => void })
                   >
                     <p className="text-gray-500 text-lg md:text-xl mb-4">
                       <TypeWriter
-                        text="J'ai quelque chose a vous montrer."
+                        text="J'ai quelque chose à vous montrer."
                         speed={35}
                         delay={200}
                         onDone={() => setTimeout(() => setLine2(true), 600)}
@@ -793,7 +798,7 @@ export default function CompanyPitch({ onContinue }: { onContinue: () => void })
               className="text-center mb-12"
             >
               <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-md mx-auto">
-                La question n&apos;est pas si je suis prete.
+                La question n&apos;est pas si je suis prête.
               </p>
               <p className="text-white text-lg md:text-xl font-bold mt-2">
                 C&apos;est quand est-ce qu&apos;on commence.
@@ -806,7 +811,7 @@ export default function CompanyPitch({ onContinue }: { onContinue: () => void })
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 2.8, duration: 0.5 }}
             >
-              <EscapingButton onClick={onContinue} label="Decouvrir mon CV" />
+              <EscapingButton onClick={onContinue} label="Découvrir mon CV" />
             </motion.div>
           </motion.div>
         )}
